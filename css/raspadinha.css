@@ -1,0 +1,155 @@
+body {
+    padding: 10px 0 0;
+    background: #ebebeb;
+    height: 100%;
+    width: 100%;
+    /* background: url(../img/bg.jpg) no-repeat center top; */
+}
+
+.topo-cliente {
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    width: 320px;
+    height: 120px;
+}
+
+.container {
+    overflow: hidden;
+    position: relative;
+    width: 320px;
+    height: 340px;
+    margin: 0 auto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    cursor: url('../img/coin.ico'), grab;
+    cursor: url('../img/coin.ico'), -webkit-grab;
+    background: url(../img/bg-premio.jpg) center top;
+}
+
+.canvas {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    width: 320px;
+    height: 340px;
+}
+
+.resultado {
+    font-family: Arial, sans-serif;
+    position: relative;
+    visibility: hidden;
+    padding: 0;
+    background-size: cover;
+    height: 340px;
+    width: 320px;
+    text-align: center;
+    color: #000000;
+}
+
+.resultado .ganhou, .resultado .perdeu {
+    height: 100%;
+}
+
+.resultado .ganhou {
+    background: url(../img/bg-premio.jpg) center top;
+}
+
+.resultado .ganhou .mensagem {
+    padding: 5px 0;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 18px;
+}
+.resultado .ganhou .imagem {
+    padding: 3px 0;
+}
+.resultado .ganhou .imagem img {
+    width: 180px;
+}
+.resultado .ganhou .premio {
+    padding: 3px 0;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 16px;
+}
+.resultado .ganhou .retirada {
+    padding: 5px 0 0;
+    font-size: 13px;
+}
+.resultado .ganhou .local {
+    padding: 0;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 15px;
+}
+.resultado .ganhou .prazo {
+    padding: 5px 0 0;
+    font-size: 11px;
+}
+.resultado .ganhou .prazo span {
+    font-weight: bold;
+}
+
+.resultado .perdeu {
+    background: url(../img/bg-perdeu.jpg) center top;
+}
+
+.resultado .perdeu .imagem {
+    padding: 30px 0 5px;
+}
+.resultado .perdeu .mensagem {
+    padding: 5px 0 10px;
+    font-size: 28px;
+    font-weight: 900;
+    line-height: 28px;
+}
+.resultado .perdeu .tente {
+    padding: 3px 0;
+    font-size: 18px;
+    line-height: 16px;
+}
+.resultado .perdeu .tente span {
+    padding: 3px 0;
+    font-size: 18px;
+    line-height: 16px;
+    font-weight: bold;
+}
+.resultado .perdeu .proxima {
+    padding: 10px 0 0;
+    font-size: 18px;
+    line-height: 16px;
+}
+
+.interatividade {
+    width: 340px;
+    margin: 15px auto 0;
+    text-align: center;
+}
+.interatividade .encerrar {
+    display: inline-block;
+}
+.interatividade .quantidade {
+    display: inline-block;
+    margin: 0 10px;
+}
+.interatividade .proxima {
+    display: inline-block;
+}
+
+.btn {
+    background: #fff;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.btn-encerrar {
+    background: #950000;
+}
+.btn-proximo {
+    background: #187b01;
+}

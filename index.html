@@ -4,36 +4,119 @@
 		<meta charset="UTF-8">
 		<title>Raspadinha GS Group</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
-		<link rel="stylesheet" href="css/normalize.css">
-
-		<!-- CSS DA RASPADINHA - POR ENQUANTO MANTENHA INTACTO -->
-		<link rel="stylesheet" href="css/scratchcard.css">
-
+		<link rel="stylesheet" href="css/reset.css">
+		<!-- CSS DA RASPADINHA -->
+		<link rel="stylesheet" href="css/raspadinha.css">
 	</head>
 	<body>
-        
-    <!-- CONTAINER DA RASPADINHA -->
-    <!-- CONTAINER DA RASPADINHA -->
-	<div class="container" id="scratch-container">
 
-		<!-- JS CANVAS DA RASPADINHA MANTER TAMANHO 340X340PX -->
-		<canvas class="canvas" id="scratch-canvas" width="340" height="340"></canvas>
-
-		<!-- WINNER BOX DA RASPADINHA -->
-		<!-- AQUI PRECISO FAZER A DIAGRAMAÇÃO DE PRÊMIOS PARA TORNAR DINÂMICO A CHAMADA DELES FAZENDO HTML + CSS -->
-		<div class="winner-box">
+		<!-- ESTILO CUSTOMIZADO PARA CLIENTES -->
+		<style>
+			.cor-fonte-cliente {
+				color: #618930;
+			}
+			.cor-fundo-cliente {
+				background-color: #618930;
+			}
+			.cor-borda-cliente-topo {
+				border: 10px solid #618930;
+				border-bottom: 0;
+			}
+			.cor-borda-cliente {
+				border: 10px solid #618930;
+			}
+			.ganhou {
+				display: block;
+			}
+			.perdeu {
+				display: none;
+			}
+		</style>
+		
+		<!-- CONTAINER DA RASPADINHA -->
+		<!-- CONTAINER DA RASPADINHA -->
+		<!-- TOPO COM IMAGEM CONFIGURÁVEL -->
+		<div class="topo-cliente cor-fundo-cliente cor-borda-cliente-topo">
+			<!-- IMAGEM CONFIGURÁVEL DE 320 X 120PX -->
+			<img src="img/cliente/topo320x120.jpg">
 		</div>
 
-	</div>
-	<!-- CONTAINER DA RASPADINHA -->
-	<!-- CONTAINER DA RASPADINHA -->
+		<!-- RASPADINHA E MENSAGEM DE GANHOU E PERDEU -->
+		<div class="container cor-borda-cliente" id="scratch-container">
 
-	<!-- SCRIPTS DA RASPADINHA -->
-	<!-- NÃO TESTEI COM UM JQUERY MAIS ATUALIZADO -->
-	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-	
-	<!-- JS SCRATCHCARD.JS - CORE DA RASPADINHA -->
-	<script src="js/scratchcard.js"></script>
+			<!-- JS CANVAS DA RASPADINHA MANTER TAMANHO 320 X 340PX -->
+			<canvas class="canvas" id="scratch-canvas" width="320" height="340"></canvas>
+			
+			<!-- RESULTADO DA RASPADINHA -->
+			<div class="resultado">
+				<!-- SE GANHAR -->
+				<div class="ganhou">
+					<!-- MENSAGEM DE GANHOU -->
+					<div class="mensagem">
+						Parabéns! Você ganhou
+					</div>
+					<!-- FOTO DO PRODUTO -->
+					<div class="imagem">
+						<img src="img/premios/produto.jpg">
+					</div>
+					<!-- NOME | TÍTULO DO PRÊMIO -->
+					<div class="premio">
+						Pacote Café Tradicional Melitta ou Um Prêmio Com Duas Linhas
+					</div>
+					<!-- CHAMADA PARA RETIRADA DO PRÊMIO -->
+					<div class="retirada">Retire o seu prêmio na Loja</div>
+					<!-- LOCAL DE RETIRADA -->
+					<div class="local">
+						GS Group São José do Rio Preto ou Uma Com Duas Linhas
+					</div>
+					<!-- PRAZO DE RETIRADA  -->
+					<div class="prazo">
+						Retire seu prêmio até
+						<!-- DATA PARA RETIRADA DO PRÊMIO -->
+						<span>15/12/2018</span>
+					</div>
+				</div>
+				<!-- SE PERDER -->
+				<div class="perdeu">
+					<!-- IMAGEM DE PERDEU -->
+					<div class="imagem">
+						<img src="img/perdeu.png">
+					</div>
+					<!-- MENSAGEM SE PERDEU -->
+					<div class="mensagem">
+						Não foi dessa vez!
+					</div>
+					<!-- CHAMADA PARA RESTANTES -->
+					<div class="tente">
+						Você ainda tem
+						<!-- RASPADINHAS RESTANTES -->
+						<span>5 raspadinhas</span>.
+					</div>
+					<!-- CHAMADA PARA PRÓXIMA RASPADINHA SEM INTERAÇÃO -->
+					<div class="proxima">
+						Tente novamente na próxima.
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- ITENS INTERATIVOS -->
+		<div class="interatividade">
+			<div class="encerrar">
+				<a class="btn btn-encerrar">Encerrar</a>
+			</div>
+			<div class="quantidade">
+				0001 de 1000
+			</div>
+			<div class="proxima">
+				<a class="btn btn-proximo">Próxima</a>
+			</div>
+		</div>
+		<!-- FIM DO CONTAINER DA RASPADINHA -->
+		<!-- FIM DO CONTAINER DA RASPADINHA -->
+
+		<script src='js/jquery-2.1.3.js'></script>
+		<script src="js/raspadinha.js"></script>
 
 	</body>
 </html>
