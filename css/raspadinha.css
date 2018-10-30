@@ -1,13 +1,112 @@
+/* *********************************
+****** RESET CSS
+********************************* */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html {
+    font-family: Arial, sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
 body {
-    padding: 10px 0 0;
-    background: #ebebeb;
+    margin: 0
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* *********************************
+****** RASPADINHA CSS
+********************************* */
+
+body, html {
     height: 100%;
     width: 100%;
-    /* background: url(../img/bg.jpg) no-repeat center top; */
+    min-height: 100%;
+}
+
+.full-container {
+    height: 100%;
+    width: 100%;
+    min-height: 100%;
+}
+
+/* *********************************
+****** FUNDO
+********************************* */
+
+.full-bg {
+    height: 100%;
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(../img/bg-pattern.png);
+    opacity: 0.35;
+    z-index: 100;
+}
+
+.full-bg-fade {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
+    z-index: 200;
+    height: 100%;
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* *********************************
+****** CONTAINER
+********************************* */
+
+.container-fit {
+    width: 340px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1000;
 }
 
 .topo-cliente {
-    margin: 0 auto;
+    padding: 10px 0 0 0;
+    margin: 0 auto 10px;
     position: relative;
     display: block;
     width: 320px;
@@ -18,7 +117,7 @@ body {
     overflow: hidden;
     position: relative;
     width: 320px;
-    height: 340px;
+    height: 260px;
     margin: 0 auto;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -28,6 +127,7 @@ body {
     cursor: url('../img/coin.ico'), grab;
     cursor: url('../img/coin.ico'), -webkit-grab;
     background: url(../img/bg-premio.jpg) center top;
+    border-radius: 20px;
 }
 
 .canvas {
@@ -35,7 +135,7 @@ body {
     top: 0;
     z-index: 10;
     width: 320px;
-    height: 340px;
+    height: 260px;
 }
 
 .resultado {
@@ -44,8 +144,8 @@ body {
     visibility: hidden;
     padding: 0;
     background-size: cover;
-    height: 340px;
     width: 320px;
+    height: 260px;
     text-align: center;
     color: #000000;
 }
@@ -58,8 +158,12 @@ body {
     background: url(../img/bg-premio.jpg) center top;
 }
 
-.resultado .ganhou .mensagem {
-    padding: 5px 0;
+.resultado .ganhou .parabens {
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin: 5px 0 0 -85px;
     font-size: 20px;
     font-weight: bold;
     line-height: 18px;
@@ -68,30 +172,14 @@ body {
     padding: 3px 0;
 }
 .resultado .ganhou .imagem img {
-    width: 180px;
+    width: 145px;
+    margin: 50px 0 0 0;
 }
 .resultado .ganhou .premio {
-    padding: 3px 0;
-    font-size: 16px;
+    padding: 3px 5px;
+    font-size: 14px;
     font-weight: bold;
-    line-height: 16px;
-}
-.resultado .ganhou .retirada {
-    padding: 5px 0 0;
-    font-size: 13px;
-}
-.resultado .ganhou .local {
-    padding: 0;
-    font-size: 15px;
-    font-weight: bold;
-    line-height: 15px;
-}
-.resultado .ganhou .prazo {
-    padding: 5px 0 0;
-    font-size: 11px;
-}
-.resultado .ganhou .prazo span {
-    font-weight: bold;
+    line-height: 14px;
 }
 
 .resultado .perdeu {
@@ -99,10 +187,10 @@ body {
 }
 
 .resultado .perdeu .imagem {
-    padding: 30px 0 5px;
+    padding: 15px 0 5px;
 }
 .resultado .perdeu .mensagem {
-    padding: 5px 0 10px;
+    padding: 5px 0 5px;
     font-size: 28px;
     font-weight: 900;
     line-height: 28px;
@@ -124,32 +212,109 @@ body {
     line-height: 16px;
 }
 
+.quantidade {
+    width: 320px;
+    padding: 4px 0;
+    margin: 10px auto 0;
+    text-align: center;
+    position: relative;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+}
+.quantidade .total {
+    text-align: center;
+    margin: 0 6px;
+    color: #fff;
+    text-shadow: 2px 1px 3px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: -0.4px;
+}
+.quantidade .total span {
+    font-size: 14px;
+    letter-spacing: -0.4px;
+}
+
+.btn {
+    background: #fff;
+    border-radius: 50px;
+    padding: 10px 30px;
+    font-size: 14px;
+    font-weight: 900;
+    color: #fff;
+    text-shadow: 2px 1px 3px rgba(0, 0, 0, 0.4);
+    text-decoration: none;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+    margin: 0 5px;
+}
+.btn-encerrar {
+    background: linear-gradient(to top, #d73503, #ff5003);
+    transition: all 0.5s;
+    background-size: 200% 200%;
+}
+.btn-encerrar:hover {
+    background-size: 200% 200%;
+    background-position: 150% 50%;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+}
+.btn-proximo {
+    background: linear-gradient(to top, #125502, #187b01);
+    transition: all 0.25s;
+    background-size: 200% 200%;
+}
+.btn-proximo:hover {
+    background-size: 200% 200%;
+    background-position: 150% 50%;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+}
+
+.info-padrao {
+    text-align: center;
+    color: #fff;
+    width: 320px;
+    margin: 0 auto;
+}
+.info-padrao .retirada {
+    padding: 8px 0 0;
+    font-size: 13px;
+}
+.info-padrao .local {
+    padding: 0;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 15px;
+}
+.info-padrao .prazo {
+    padding: 7px 0;
+    font-size: 11px;
+}
+.info-padrao .prazo span {
+    font-weight: bold;
+}
+
 .interatividade {
     width: 340px;
+    height: 33px;
     margin: 15px auto 0;
     text-align: center;
+    position: relative;
+    z-index: 1000;
 }
 .interatividade .encerrar {
     display: inline-block;
 }
 .interatividade .quantidade {
     display: inline-block;
-    margin: 0 10px;
+    margin: 0 6px;
+    color: #fff;
+    text-shadow: 2px 1px 3px rgba(0, 0, 0, 0.4);
+    width: 120px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: -0.4px;
 }
 .interatividade .proxima {
     display: inline-block;
-}
-
-.btn {
-    background: #fff;
-    border-radius: 50px;
-    padding: 10px 20px;
-    font-size: 14px;
-    font-weight: bold;
-}
-.btn-encerrar {
-    background: #950000;
-}
-.btn-proximo {
-    background: #187b01;
 }
