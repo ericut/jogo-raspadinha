@@ -113,6 +113,12 @@ body, html {
     height: 120px;
 }
 
+.dotline {
+    width: 330px;
+    border-left: 2px dotted #bbbbbb;
+    border-right: 2px dotted #bbbbbb;
+}
+
 .container {
     overflow: hidden;
     position: relative;
@@ -224,7 +230,7 @@ body, html {
 }
 .quantidade .total {
     text-align: center;
-    margin: 0 6px;
+    margin: 0;
     color: #fff;
     text-shadow: 2px 1px 3px rgba(0, 0, 0, 0.4);
     width: 100%;
@@ -297,9 +303,9 @@ body, html {
 }
 
 .interatividade {
-    width: 340px;
-    height: 33px;
-    margin: 15px auto 0;
+    width: 320px;
+    height: 40px;
+    margin: 10px auto 0;
     text-align: center;
     position: relative;
     z-index: 1000;
@@ -307,16 +313,7 @@ body, html {
 .interatividade .encerrar {
     display: inline-block;
 }
-.interatividade .quantidade {
-    display: inline-block;
-    margin: 0 6px;
-    color: #fff;
-    text-shadow: 2px 1px 3px rgba(0, 0, 0, 0.4);
-    width: 120px;
-    font-size: 18px;
-    font-weight: bold;
-    letter-spacing: -0.4px;
-}
 .interatividade .proxima {
     display: inline-block;
+    text-align: center;
 }

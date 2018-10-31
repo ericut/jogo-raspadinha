@@ -19,7 +19,7 @@
 			<!-- A CONDIÇÃO TAMBÉM PODE SER FEITA NA NO CÓDIGO HTML NA TAG DE CLASSE RESULTADO -->
 			<style>
 				.full-container  {
-					background: #02581e;
+					background: #586610;
 				}
 				.ganhou {
 					display: block;
@@ -42,61 +42,74 @@
 					<img src="img/cliente/topo320x120.png">
 				</div>
 
-				<!-- RASPADINHA E MENSAGEM DE GANHOU E PERDEU -->
-				<div class="container" id="scratch-container">
+				<div class="dotline">
+					<!-- RASPADINHA E MENSAGEM DE GANHOU E PERDEU -->
+					<div class="container" id="scratch-container">
 
-					<!-- JS CANVAS DA RASPADINHA MANTER TAMANHO 320 X 280PX -->
-					<canvas class="canvas" id="scratch-canvas" width="320" height="260"></canvas>
-					
-					<!-- RESULTADO DA RASPADINHA -->
-					<div class="resultado">
-
-						<!-- SE GANHAR -->
-						<div class="ganhou">
-							<!-- MENSAGEM DE GANHOU -->
-							<div class="parabens">
-								<img src="img/parabens.png">
-							</div>
-							<!-- FOTO DO PRODUTO -->
-							<div class="imagem">
-								<img src="img/premios/produto.jpg">
-							</div>
-							<!-- NOME | TÍTULO DO PRÊMIO -->
-							<div class="premio">
-								Pacote Café Tradicional Melitta ou Um Prêmio Com Duas Linhas ou Então Com Três Linhas de Nome do Prêmio
-							</div>
-						</div>
-
-						<!-- SE PERDER -->
-						<div class="perdeu">
-							<!-- IMAGEM DE PERDEU -->
-							<div class="imagem">
-								<img src="img/perdeu.png">
-							</div>
-							<!-- MENSAGEM SE PERDEU -->
-							<div class="mensagem">
-								Não foi dessa vez!
-							</div>
-							<!-- CHAMADA PARA RESTANTES -->
-							<div class="tente">
-								Você ainda tem
-								<!-- RASPADINHAS RESTANTES -->
-								<span>5 raspadinhas</span>.
-							</div>
-							<!-- CHAMADA PARA PRÓXIMA RASPADINHA SEM INTERAÇÃO -->
-							<div class="proxima">
-								Tente novamente na próxima.
-							</div>
-						</div>
+						<!-- JS CANVAS DA RASPADINHA MANTER TAMANHO 320 X 280PX -->
+						<canvas class="canvas" id="scratch-canvas" width="320" height="260"></canvas>
 						
+						<!-- RESULTADO DA RASPADINHA -->
+						<div class="resultado">
+
+							<!-- SE GANHAR -->
+							<div class="ganhou">
+								<!-- MENSAGEM DE GANHOU -->
+								<div class="parabens">
+									<img src="img/parabens.png">
+								</div>
+								<!-- FOTO DO PRODUTO -->
+								<div class="imagem">
+									<img src="img/premios/produto.jpg">
+								</div>
+								<!-- NOME | TÍTULO DO PRÊMIO -->
+								<div class="premio">
+									Pacote Café Tradicional Melitta ou Um Prêmio Com Duas Linhas ou Então Com Três Linhas de Nome do Prêmio
+								</div>
+							</div>
+
+							<!-- SE PERDER -->
+							<div class="perdeu">
+								<!-- IMAGEM DE PERDEU -->
+								<div class="imagem">
+									<img src="img/perdeu.png">
+								</div>
+								<!-- MENSAGEM SE PERDEU -->
+								<div class="mensagem">
+									Não foi dessa vez!
+								</div>
+								<!-- CHAMADA PARA RESTANTES -->
+								<div class="tente">
+									Você ainda tem
+									<!-- RASPADINHAS RESTANTES -->
+									<span>5 raspadinhas</span>.
+								</div>
+								<!-- CHAMADA PARA PRÓXIMA RASPADINHA SEM INTERAÇÃO -->
+								<div class="proxima">
+									Tente novamente na próxima.
+								</div>
+							</div>
+							
+						</div>
 					</div>
 				</div>
 
 				<!-- QUANTIDADE DE RASPADINHAS -->
 				<div class="quantidade">
 					<div class="total">
-						<span>Raspadinhas:</span>
-						1 de 1000
+						<span>Raspadinhas:</span> 1 de 3
+					</div>
+				</div>
+
+				<!-- BOTÕES INTERATIVOS  -->
+				<div class="interatividade">
+					<!-- BOTÃO ENCERRAR 
+					<div class="encerrar">
+						<a class="btn btn-encerrar" href="#"><img src="img/encerrar.png"> Encerrar</a>
+					</div>
+					<!-- BOTÃO PRÓXIMO -->
+					<div class="proxima">
+						<a class="btn btn-proximo" href="#">Próxima <img src="img/proxima.png"></a>
 					</div>
 				</div>
 
@@ -113,18 +126,6 @@
 						O prazo de retirada é
 						<!-- DATA PARA RETIRADA DO PRÊMIO -->
 						<span>15/12/2018</span>
-					</div>
-				</div>
-
-				<!-- BOTÕES INTERATIVOS -->
-				<div class="interatividade">
-					<!-- BOTÃO ENCERRAR -->
-					<div class="encerrar">
-						<a class="btn btn-encerrar" href="#"><img src="img/encerrar.png"> Encerrar</a>
-					</div>
-					<!-- BOTÃO PRÓXIMO -->
-					<div class="proxima">
-						<a class="btn btn-proximo" href="#">Próxima <img src="img/proxima.png"></a>
 					</div>
 				</div>
 
