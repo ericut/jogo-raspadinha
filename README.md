@@ -63,21 +63,6 @@ Ganhou:
 	</div>
 </div>
 ```
-
-Perdeu:
-```HTML
-<div  class="ganhou">
-	<div  class="parabens"> <!-- IMG de Parabéns -->
-		<img  src="img/parabens.png">
-	</div>
-	<div  class="imagem"> <!-- IMG do Produto -->
-		<img  src="img/premios/produto.jpg">
-	</div>
-	<div  class="premio"> <!-- Nome do Produto -->
-		Nome do Prêmio
-	</div>
-</div>
-```
 Container da quantidade de Raspadinhas:
 ```HTML
 <div class="quantidade">
