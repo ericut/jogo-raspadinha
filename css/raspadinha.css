@@ -189,7 +189,7 @@ body, html {
 }
 
 .resultado .perdeu {
-    background: url(../img/bg-perdeu.jpg) center top;
+    /* background: url(../img/bg-perdeu.jpg) center top; */
 }
 
 .resultado .perdeu .imagem {
