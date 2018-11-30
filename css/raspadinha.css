@@ -212,6 +212,11 @@ body, html {
     line-height: 16px;
     font-weight: bold;
 }
+
+/* .proxima .info-padrao .ganhou .perdeu{
+    display: none;
+} */
+
 .resultado .perdeu .proxima {
     padding: 10px 0 0;
     font-size: 18px;
@@ -316,4 +321,10 @@ body, html {
 .interatividade .proxima {
     display: inline-block;
     text-align: center;
+}
+
+.timer{
+    color:#fff;
+    font-size: 15px;
+    text-align:center;
 }
