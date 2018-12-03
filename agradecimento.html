@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Raspadinha GS Group</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
+
+		<!-- OBRIGATÓRIO CHAMAR CSS DA RASPADINHA -->
+		<link rel="stylesheet" href="css/raspadinha.css">
+	</head>
+	<body>
+
+		<main class="full-container">
+
+			<!-- ESTILO CUSTOMIZADO PARA CLIENTES -->
+			<!-- ADICIONAR A COR DO CLIENTE NO FULL-CONTAINER -->
+			<!-- CASO GANHA DISPLAY BLOCK NA CLASSE GANHOU / DISPLAY NONE NA PERDEU -->
+			<!-- CASO PERDER DISPLAY NONE NA CLASSE GANHOU / DISPLAY BLOCK NA PERDEU -->
+			<!-- A CONDIÇÃO TAMBÉM PODE SER FEITA NA NO CÓDIGO HTML NA TAG DE CLASSE RESULTADO -->
+			<style>
+				.full-container  {
+					background: #586610;
+				}
+				.ganhou {
+					display: none;
+				}
+				.perdeu {
+					display: block;
+				}
+			</style>
+
+			<div class="full-bg"></div>
+			<div class="full-bg-fade"></div>
+
+			<!-- CONTAINER DA RASPADINHA -->
+			<!-- CONTAINER DA RASPADINHA -->
+			<div class="container-fit">
+
+				<div class="agradecimento">
+					<div class="mensagem-congrats">
+					
+						Agradecemos a sua participação!
+
+					</div>
+				</div>
+				<!-- BLOCO DE INFORMAÇÃO -->
+				<div class="bloco-informacao">
+
+					<!-- BOTÕES INTERATIVOS  -->
+					<div class="interatividade">
+						<!-- BOTÃO ENCERRAR -->
+						<div class="encerrar">
+							<a class="btn btn-encerrar" href="#"><img src="img/encerrar.png"> Encerrar</a>
+						</div>
+						<!-- BOTÃO PRÓXIMO -->
+						<!-- <div class="proxima">
+							<a class="btn btn-proximo" href="#">Próxima <img src="img/proxima.png"></a>
+						</div> -->
+					</div>
+
+				</div>
+
+			</div>
+			<!-- FIM DO CONTAINER DA RASPADINHA -->
+			<!-- FIM DO CONTAINER DA RASPADINHA -->
+
+		</main>
+
+		<!-- OBRIGATÓRIO CHAMAR JQUERY 2.1.3 E A RASPADINHA.JS -->
+		<script src='js/jquery-2.1.3.js'></script>
+		<script src="js/raspadinha.js"></script>
+
+	</body>
+</html>

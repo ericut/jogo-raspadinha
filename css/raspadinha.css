@@ -31,9 +31,6 @@ html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%
 }
-body {
-    margin: 0
-}
 ol, ul {
 	list-style: none;
 }
@@ -56,14 +53,16 @@ table {
 
 body, html {
     height: 100%;
-    width: 100%;
     min-height: 100%;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
 }
 
 .full-container {
-    height: 100%;
     width: 100%;
     min-height: 100%;
+    position: relative;
 }
 
 /* *********************************
@@ -144,6 +143,19 @@ body, html {
     height: 260px;
 }
 
+
+@keyframes animacao-intro {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.animacao, .animacao .perdeu, .animacao .ganhou {
+    animation-name: animacao-intro;
+    animation-direction: normal;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+}
+
 .resultado {
     font-family: Arial, sans-serif;
     position: relative;
@@ -154,6 +166,7 @@ body, html {
     height: 260px;
     text-align: center;
     color: #000000;
+    opacity: 1;
 }
 
 .resultado .ganhou, .resultado .perdeu {
@@ -195,23 +208,27 @@ body, html {
 .resultado .perdeu .imagem {
     padding: 15px 0 5px;
 }
+
 .resultado .perdeu .mensagem {
     padding: 5px 0 5px;
     font-size: 28px;
     font-weight: 900;
     line-height: 28px;
 }
+
 .resultado .perdeu .tente {
     padding: 3px 0;
     font-size: 18px;
     line-height: 16px;
 }
+
 .resultado .perdeu .tente span {
     padding: 3px 0;
     font-size: 18px;
     line-height: 16px;
     font-weight: bold;
 }
+
 .resultado .perdeu .proxima {
     padding: 10px 0 0;
     font-size: 18px;
@@ -228,6 +245,7 @@ body, html {
     background: rgba(0, 0, 0, 0.1);
     border-radius: 6px;
 }
+
 .quantidade .total {
     text-align: center;
     margin: 0;
@@ -238,8 +256,76 @@ body, html {
     font-weight: bold;
     letter-spacing: -0.4px;
 }
+
 .quantidade .total span {
     font-size: 14px;
+    letter-spacing: -0.4px;
+}
+
+.timermensagem {
+    width: 300px;
+    padding: 4px 0;
+    margin: 5px auto 10px;
+    text-align: center;
+    position: relative;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    color: #fff;
+    font-size: 12px;
+}
+
+.timermensagem span {
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    text-shadow: 2px 1px 3px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: -0.4px;
+}
+
+.mensagemaviso {
+    width: 320px;
+    padding: 4px 0;
+    margin: 10px auto 0;
+    text-align: center;
+    position: relative;
+    z-index: 1000;
+    background: rgba(150, 0, 0, 0.7);
+    border-radius: 6px;
+}
+
+.mensagemaviso .alerta {
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    text-shadow: 2px 1px 3px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: -0.4px;
+}
+
+.agradecimento {
+    width: 320px;
+    padding: 20px 0;
+    margin: 0 auto ;
+    text-align: center;
+    position: relative;
+    z-index: 1000;
+    border-radius: 6px;
+}
+
+.agradecimento .mensagem-congrats {
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    text-shadow: 2px 1px 3px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
     letter-spacing: -0.4px;
 }
 
@@ -300,6 +386,13 @@ body, html {
 }
 .info-padrao .prazo span {
     font-weight: bold;
+}
+
+.bloco-informacao {
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: 0 0 70px 0;
 }
 
 .interatividade {
