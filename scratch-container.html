@@ -1,0 +1,50 @@
+<div class="container" id="scratch-container">
+
+    <!-- JS CANVAS DA RASPADINHA MANTER TAMANHO 320 X 280PX -->
+    <canvas class="canvas" id="scratch-canvas" width="320" height="260"></canvas>
+
+    <!-- RESULTADO DA RASPADINHA -->
+    <!-- ASSIM QUE REVELAR O PRÊMIO OU SE PERDEU, ADICIONE A CLASSE 'ANIMACAO' JUNTO COM A CLASSE RESULTADO -->
+    <div class="resultado animacao">
+        <!-- SE GANHAR -->
+        <div class="ganhou" style="display:none">
+            <!-- MENSAGEM DE GANHOU -->
+            <div class="parabens">
+                <img src="img/parabens.png">
+            </div>
+            <!-- FOTO DO PRODUTO -->
+            <div class="imagem">
+                <img id="imgPremio">
+            </div>
+            <!-- NOME | TÍTULO DO PRÊMIO -->
+            <div class="premio">
+                Pacote Café Tradicional Melitta ou Um Prêmio Com Duas Linhas ou Então Com Três Linhas de Nome do Prêmio
+            </div>
+        </div>
+
+        <!-- SE PERDER -->
+        <div class="perdeu" style="display:none">
+            <!-- IMAGEM DE PERDEU -->
+            <div class="imagem">
+                <img src="img/perdeu.png">
+            </div>
+            <!-- MENSAGEM SE PERDEU -->
+            <div class="mensagem">
+                Não foi dessa vez!
+            </div>
+            <!-- CHAMADA PARA RESTANTES -->
+            <div class="tente">
+                Você ainda tem
+                <!-- RASPADINHAS RESTANTES -->
+                <span id="qtdchances"></span>.
+            </div>
+            <!-- CHAMADA PARA PRÓXIMA RASPADINHA SEM INTERAÇÃO -->
+            <div class="proxima">
+                Tente novamente na próxima.
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="js/raspadinha.js"></script>

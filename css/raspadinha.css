@@ -152,7 +152,7 @@ body, html {
 .animacao, .animacao .perdeu, .animacao .ganhou {
     animation-name: animacao-intro;
     animation-direction: normal;
-    animation-duration: 5s;
+    animation-duration: 3s;
     animation-iteration-count: 1;
 }
 
@@ -201,9 +201,9 @@ body, html {
     line-height: 14px;
 }
 
-.resultado .perdeu {
-    /* background: url(../img/bg-perdeu.jpg) center top; */
-}
+/* .resultado .perdeu {
+    background: url(../img/bg-perdeu.jpg) center top;
+} */
 
 .resultado .perdeu .imagem {
     padding: 15px 0 5px;
@@ -409,4 +409,10 @@ body, html {
 .interatividade .proxima {
     display: inline-block;
     text-align: center;
+}
+
+.timer{
+    color:#fff;
+    font-size: 15px;
+    text-align:center;
 }
