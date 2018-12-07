@@ -106,7 +106,7 @@ $(function () {
 			$('#scratch-canvas').fadeOut('slow');
 			$('.proxima').show()
 			$('.encerrar').show()
-			if(!ganhou){
+			if(ganhou){
 				$('.info-padrao').show();
 			}
 		}

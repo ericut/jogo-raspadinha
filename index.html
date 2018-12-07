@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="UTF-8">
 	<title>Raspadinha GS Group</title>
@@ -43,15 +44,7 @@
 
 				<!-- QUANTIDADE DE RASPADINHAS -->
 				<div class="quantidade">
-					<div class="total">
-						<!-- <span>Raspadinhas:</span> 1 de 3 -->
-					</div>
-				</div>
-
-				<div class="mensagemaviso" style="display: block;">
-					<div class="alerta">
-						<span>Atenção: a raspadinha estará valendo assim que iniciar a "raspagem", finalize para revelar o seu prêmio.</span>
-					</div>
+					<div class="total"></div>
 				</div>
 
 				<!-- BOTÕES INTERATIVOS  -->
@@ -69,17 +62,16 @@
 				<!-- INFORMAÇÕES PADRÃO -->
 				<div class="info-padrao" style="display:none">
 					<!-- CHAMADA PARA RETIRADA DO PRÊMIO -->
-					<div class="retirada">Em caso de premiação retire seu prêmio na Loja:</div>
+					<!-- <div class="retirada">Em caso de premiação retire seu prêmio na Loja:</div> -->
+					<div class="retirada">Retire seu prêmio na Loja:</div>
 					<!-- LOCAL DE RETIRADA -->
-					<div class="local">
-						GS Group São José do Rio Preto
-					</div>
+					<div class="local"></div>
 					<!-- PRAZO DE RETIRADA  -->
-					<div class="prazo">
-						O prazo de retirada é
+					<!-- <div class="prazo">
+						O prazo de retirada é -->
 						<!-- DATA PARA RETIRADA DO PRÊMIO -->
-						<span>15/12/2018</span>
-					</div>
+						<!-- <span>15/12/2018</span>
+					</div> -->
 				</div>
 
 			</div>
@@ -95,28 +87,7 @@
 	<script type="text/javascript">
 
 		$(document).ready(function () {
-
-			idcliente = GetURLParameter('idcliente');
-			idvarejista = GetURLParameter('idvarejista');
-			idloja = GetURLParameter('idloja');
-			idcampanha = GetURLParameter('idcampanha');
-			modulo = GetURLParameter('modulo');
-			chances = [1, 2, 3, 4, 5, 6];
-			refresh();
-			//Retorna quantidade de chances que o cliente possui (idgiroroleta) - lista
-			//Retorna se o cliente ganhou ou perdeu
-			//Dar baixar na reserva se o cliente raspou.
-
-			function GetURLParameter(sParam) {
-				var sPageURL = window.location.search.substring(1);
-				var sURLVariables = sPageURL.split('&');
-				for (var i = 0; i < sURLVariables.length; i++) {
-					var sParameterName = sURLVariables[i].split('=');
-					if (sParameterName[0] == sParam) {
-						return sParameterName[1];
-					}
-				}
-			}
+			QuantidadeChanges();
 		})
 	</script>
 </body>
