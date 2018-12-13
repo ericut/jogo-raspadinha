@@ -2,15 +2,10 @@ var totalChances = 0;
 var indice = 0;
 var ganhou = false;
 
-var idcliente = GetURLParameter('idcliente');
-var idvarejista = GetURLParameter('idvarejista');
-var idloja = GetURLParameter('idloja');
-var idcampanha = GetURLParameter('idcampanha');
-var idmodulo = GetURLParameter('idmodulo');
-var url = 'http://192.168.88.22:3000';
+var url = 'ec2-54-172-25-26.compute-1.amazonaws.com:8080';
 
 function getPremio(nomePremio) {
-    return 'https://s3.amazonaws.com/gswebhost/zoomboxapp/' + idvarejista + '/img/premio/' + nomePremio.toLowerCase();
+    return 'https://s3.amazonaws.com/gswebhost/zoomboxapp/' + GetURLParameter('idvarejista') + '/img/premio/' + nomePremio;
 }
 
 function refresh() {
@@ -32,7 +27,7 @@ function refresh() {
 function QuantidadeChanges() {
     $.ajax({
         type: 'GET',
-        url:  url + '/GamePool/api/v1/qtdchances?' + UrlComplementar(),
+        url: GetUrl('detalheparticipacao'),
         cache: false,
         success: function (result) {
             if (result.Resultado === 1) {
@@ -51,16 +46,16 @@ function QuantidadeChanges() {
 function buscaGanhador() {
     $.ajax({
         type: 'GET',
-        url:  url + '/GamePool/api/v1/participar?' + UrlComplementar(),
+        url: GetUrl('participar'),
         cache: false,
         success: function (result) {
             if (result.Resultado === 1) {
                 if (result.Chance) {
                     ganhou = result.Chance.ChanceGanha;
                     $('#qtdchances').html(result.Chance.TotalChances + " raspadinhas")
-                    
+
                     if (result.Chance.ChanceGanha) {
-                        $("#imgPremio").attr("src",getPremio(result.Chance.ImagemPremio));
+                        $("#imgPremio").attr("src", getPremio(result.Chance.ImagemPremio));
                         $(".local").html(result.Chance.NomeLojaRetirada);
                         $(".premio").html(result.Chance.NomePremio);
                         $('.ganhou').show();
@@ -70,7 +65,7 @@ function buscaGanhador() {
                     }
                 }
             }
-            else{
+            else {
                 $('.perdeu').show();
             }
         },
@@ -80,18 +75,11 @@ function buscaGanhador() {
     })
 }
 
-function GetParameter() {
-    idcliente = GetURLParameter('idcliente');
-    idvarejista = GetURLParameter('idvarejista');
-    idloja = GetURLParameter('idloja');
-    idcampanha = GetURLParameter('idcampanha');
-    idmodulo = GetURLParameter('idmodulo');
+function GetUrl(action) {
+    return window.location.protocol + '//' + url + '/GamePool/api/v1/' + action + window.location.search;
 }
 
-function UrlComplementar() {
-    GetParameter();
-    return 'IdVarejista=' + idvarejista + '&IdCampanha=' + idcampanha + '&IdCliente=' + idcliente + '&IdLoja=' + idloja + '&IdModulo=' + idmodulo;
-}
+
 
 function GetURLParameter(sParam) {
     var sPageURL = window.location.search.substring(1);
