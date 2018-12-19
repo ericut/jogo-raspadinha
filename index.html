@@ -8,6 +8,14 @@
 
 	<!-- OBRIGATÓRIO CHAMAR CSS DA RASPADINHA -->
 	<link rel="stylesheet" href="css/raspadinha.css">
+
+	<style>
+		.full-container {
+			/* background: #586610; */
+			background: @backgroundcolor;
+		}
+	</style>
+
 </head>
 
 <body>
@@ -19,12 +27,7 @@
 		<!-- CASO GANHA DISPLAY BLOCK NA CLASSE GANHOU / DISPLAY NONE NA PERDEU -->
 		<!-- CASO PERDER DISPLAY NONE NA CLASSE GANHOU / DISPLAY BLOCK NA PERDEU -->
 		<!-- A CONDIÇÃO TAMBÉM PODE SER FEITA NA NO CÓDIGO HTML NA TAG DE CLASSE RESULTADO -->
-		<style>
-			.full-container {
-				background: #586610;
-			}
-		</style>
-
+		
 		<div class="full-bg"></div>
 		<div class="full-bg-fade"></div>
 
@@ -87,7 +90,6 @@
 
 	<script type="text/javascript">
 		$(document).ready(function () {
-			debugger;
 			QuantidadeChanges();
 		})
 	</script>

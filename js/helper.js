@@ -2,7 +2,9 @@ var totalChances = 0;
 var indice = 0;
 var ganhou = false;
 
-var url = 'ec2-54-172-25-26.compute-1.amazonaws.com:8080';
+//var url = 'ec2-54-172-25-26.compute-1.amazonaws.com:8080';
+
+var url = '@urlgamepool';
 
 function getPremio(nomePremio) {
     return 'https://s3.amazonaws.com/gswebhost/zoomboxapp/' + GetURLParameter('idvarejista') + '/img/premio/' + nomePremio;
@@ -19,7 +21,6 @@ function refresh() {
             $('.perdeu').hide();
             $('.ganhou').hide();
             $(".total").html('<span>Raspadinhas:</span> ' + (indice + 1) + ' de ' + totalChances);
-            indice++;
         });
     }
 }
@@ -37,7 +38,7 @@ function QuantidadeChanges() {
             }
             refresh();
         },
-        error: function (XMLHttpRequest, textStatus, errorThrown) {
+        error: function () {
             window.location.href = 'agradecimento.html';
         }
     })
@@ -52,6 +53,7 @@ function buscaGanhador() {
             if (result.Resultado === 1) {
                 if (result.Chance) {
                     ganhou = result.Chance.ChanceGanha;
+                    indice = totalChances - result.Chance.TotalChances;
                     $('#qtdchances').html(result.Chance.TotalChances + " raspadinhas")
 
                     if (result.Chance.ChanceGanha) {
@@ -69,17 +71,20 @@ function buscaGanhador() {
                 $('.perdeu').show();
             }
         },
-        error: function (XMLHttpRequest, textStatus, errorThrown) {
+        error: function () {
             $('.perdeu').show();
         }
     })
 }
 
 function GetUrl(action) {
-    return window.location.protocol + '//' + url + '/GamePool/api/v1/' + action + window.location.search;
+    var protocol = window.location.protocol;
+    if (protocol == "file:") {
+        protocol = "http:";
+    }
+
+    return protocol + '//' + url + '/GamePool/api/v1/' + action + window.location.search;
 }
-
-
 
 function GetURLParameter(sParam) {
     var sPageURL = window.location.search.substring(1);
