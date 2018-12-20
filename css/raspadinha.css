@@ -344,7 +344,9 @@ body, html {
     display: inline-block;
 }
 .btn-encerrar {
-    background: linear-gradient(to top, #d73503, #ff5003);
+    color: #111111 !important;
+    text-shadow: none;
+    background: linear-gradient(to top, #ebebeb, #f1f1f1) #ebebeb;
     transition: all 0.5s;
     background-size: 200% 200%;
 }
@@ -354,7 +356,7 @@ body, html {
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
 }
 .btn-proximo {
-    background: linear-gradient(to top, #125502, #187b01);
+    background: linear-gradient(to top, #125502, #187b01) #125502;
     transition: all 0.25s;
     background-size: 200% 200%;
 }
