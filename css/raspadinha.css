@@ -63,6 +63,9 @@ body, html {
     width: 100%;
     min-height: 100%;
     position: relative;
+    margin: 0 auto;
+    display: block;
+    position: relative;
 }
 
 /* *********************************
